@@ -113,7 +113,7 @@
 
         // 登录成功返回上一页
         if (authResponse.statusCode === 201) {
-          wepy.navigatBack()
+          wepy.navigateBack()
         }
       } catch (err) {
         wepy.showModal({
