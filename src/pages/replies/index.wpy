@@ -48,6 +48,7 @@
 <script>
   import wepy from 'wepy'
   import replyMixin from '@/mixins/replyMixin'
+  import unreadCount from '@/mixins/unreadCount'
 
   export default class replyIndex extends wepy.page {
     config = {
@@ -60,7 +61,7 @@
       requestData: {},
       topicId: 0
     }
-    mixins = [replyMixin]
+    mixins = [replyMixin, unreadCount]
     async onLoad(options) {
       this.topicId = options.topic_id
       // 获取 URL 参数中的 话题id
